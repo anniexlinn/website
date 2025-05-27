@@ -4,7 +4,7 @@ export const featuredProjects = [
     title: "AI-Powered Math Battle Card Game",
     description: "A full-stack, educational web game that teaches mathematics through AI-powered battles. Designed for engagement and learning using real-time feedback and equation-solving mechanics.",
     technologies: ["JavaScript", "Node.js", "HTML/CSS", "OpenAI API", "Gemini API", "Phaser"],
-    url: "https://github.com/klopfer/collectiongame/tree/main",
+    url: "https://github.com/klopfer/collectiongame",
     updated: "Updated recently"
   },
   {
