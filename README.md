@@ -3,5 +3,5 @@
 A modern website built with React & Next.js, TailwindCSS, + Vercel
 
 
-[Link Text](https://www.anniexlin.com/)
+[www.anniexlin.com](https://www.anniexlin.com/)
 
