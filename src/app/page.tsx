@@ -62,15 +62,15 @@ export default function Home() {
           {/* Intro Paragraph */}
           <div className="prose prose-gray max-w-lg">
             <p className="text-gray-700 mb-4">
-              Hi! I'm Annie, a rising senior at MIT studying CS & AI from Houston, TX. 
+              Hi! I&apos;m Annie, a rising senior at MIT studying CS & AI from Houston, TX. 
             </p>
             <p className="text-gray-700 mb-4">
-              I'm passionate about innovating, whether that means bringing my ideas to life or being a part of something huge.
+              I&apos;m passionate about innovating, whether that means bringing my ideas to life or being a part of something huge.
               My current interests are in software development, AI/ML, data analytics, and exploring the applications 
               of these in healthcare and fintech. 
             </p>
             <p className="text-gray-700">
-              Outside of tech, I love art, piano, dance, swimming, binge-watching c/kdramas, and trying new coffees & matchas!
+              Outside of tech, I love art, piano, dance, swimming, binge-watching c/kdramas, and trying new coffees &amp; matchas!
             </p>
           </div>
         </div>
