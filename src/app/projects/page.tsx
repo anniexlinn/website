@@ -60,7 +60,7 @@ export default function Projects() {
               className="text-sm text-[#5a534c] hover:text-[#2a2520] transition-colors flex items-center gap-1"
             >
               <FiGithub className="w-4 h-4" />
-              View project 
+              View more 
               <FiExternalLink className="w-3 h-3 opacity-80 group-hover:opacity-100 transition-opacity" />
             </a>
           </section>
