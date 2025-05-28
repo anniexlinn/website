@@ -1,6 +1,6 @@
-# My Personal Website
+# personal website
 
-A modern website built with React & Next.js, TailwindCSS, + Vercel
+a modern website built with React & Next.js, TailwindCSS, and Vercel
 
 still a work in progress :D
 
