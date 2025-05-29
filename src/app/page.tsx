@@ -43,9 +43,7 @@ export default function Home() {
             Annie Lin
           </h1>
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-4">
-            <a href="mailto:axlin@mit.edu" className="hover:underline text-[#5a534c] transition-colors">
-              axlin@mit.edu
-            </a>
+            <span className="text-[#5a534c]">axlin[at]mit[dot]edu</span>
             <div className="flex gap-4">
               <a href="https://github.com/anniexlinn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <FiGithub className="w-5 h-5 text-[#5a534c] hover:text-[#2a2520] transition-colors" />
