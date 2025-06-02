@@ -58,7 +58,7 @@ export default function Home() {
           {/* Intro Paragraph */}
           <div className="prose prose-gray max-w-lg">
             <p className="text-[#5a534c] mb-4">
-              Hi! I&apos;m Annie, a rising senior at MIT studying CS & AI from Houston, TX. 
+              Hi! I&apos;m Annie, a rising senior at MIT studying Computer Science + Artificial Intelligence from Houston, TX. 
             </p>
             <p className="text-[#5a534c] mb-4">
               I&apos;m passionate about innovating, whether that means bringing my ideas to life or being a part of something meaningful.
