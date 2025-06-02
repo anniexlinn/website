@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FiArrowRight, FiGithub, FiLinkedin, FiInstagram, FiHome, FiFolder } from "react-icons/fi";
+import { FiArrowRight, FiGithub, FiLinkedin, FiHome, FiFolder } from "react-icons/fi";
 import { featuredProjects } from "@/data/projects";
 import { Inter } from 'next/font/google';
 import Footer from "@/components/Footer";

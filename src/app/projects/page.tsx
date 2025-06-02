@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FiGithub, FiExternalLink, FiHome, FiFolder } from "react-icons/fi";
+import { FiGithub, FiHome, FiFolder } from "react-icons/fi";
 import { allProjects } from "@/data/projects";
 import { Inter } from 'next/font/google';
 import Footer from "@/components/Footer";
