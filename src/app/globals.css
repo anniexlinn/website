@@ -1,26 +1,106 @@
 @import "tailwindcss";
 
 :root {
-  --background: #fef7f6;
+  /* Light theme (unchanged) */
+  --background: #fef7f6; /* Your light pink */
   --foreground: #171717;
+  --text-primary: #171717;
+  --text-secondary: #3f3f3f;
+  --accent: #4d8f9e; /* Teal-blue for bubbles (light mode) */
+}
+
+.dark {
+  /* Enhanced dark theme */
+  --background: #1a1a1a;
+  
+  /* Text colors */
+  --foreground: #f8e9e8; /* Base text */
+  --text-primary: #ffd6d6; /* Brighter pink for headings */
+  --text-secondary: #e8c9c8; /* Softer pink for subtext */
+  
+  /* Accents */
+  --accent: #5a9cad; /* Muted teal-blue for bubbles */
+  --accent-text: #171717; /* Dark text inside bubbles */
+  
+  /* Additional pink tones */
+  --pink-light: #f8e9e8;
+  --pink-medium: #f0c8c6;
+  --pink-dark: #e8a7a5;
+
+  /* Add these new variables */
+  --interactive: #f0c8c6; /* Light pink */
+  --interactive-hover: #ffb6b6; /* Brighter pink */
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-accent: var(--accent);
+  --color-accent-text: var(--accent-text);
+  --color-pink-light: var(--pink-light);
+  --color-pink-medium: var(--pink-medium);
+  --color-pink-dark: var(--pink-dark);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Interactive Elements - Light Mode */
+.interactive-element {
+  color: var(--text-secondary); /* #3f3f3f in light mode */
+  transition: color 200ms ease;
 }
 
+.interactive-element:hover {
+  color: #f9a8d4; /* Your light mode pink hover (similar to pink-300) */
+}
+
+/* Interactive Elements - Dark Mode */
+.dark .interactive-element {
+  color: var(--interactive) !important; /* #f0c8c6 */
+}
+
+.dark .interactive-element:hover {
+  color: var(--interactive-hover) !important; /* #ffb6b6 */
+}
+
+/* Base styles */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), sans-serif;
 }
+
+/* Text hierarchy */
+h1, h2, h3 {
+  color: var(--text-primary);
+}
+
+h4, h5, h6 {
+  color: var(--pink-medium);
+}
+
+p, li {
+  color: var(--foreground);
+}
+
+.secondary-text {
+  color: var(--text-secondary);
+}
+
+/* Technology bubbles */
+.tech-bubble {
+  background-color: var(--accent);
+  color: var(--accent-text);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Special pink accents */
+.pink-light { color: var(--pink-light); }
+.pink-medium { color: var(--pink-medium); }
+.pink-dark { color: var(--pink-dark); }

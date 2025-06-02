@@ -3,6 +3,7 @@ import Image from "next/image";
 import { FiArrowRight, FiGithub, FiLinkedin, FiInstagram, FiHome, FiFolder } from "react-icons/fi";
 import { featuredProjects } from "@/data/projects";
 import { Inter } from 'next/font/google';
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -13,12 +14,12 @@ const inter = Inter({
 export default function Home() {
   return (
     <main className={`min-h-screen px-6 py-12 md:px-12 max-w-3xl mx-auto ${inter.variable} font-sans antialiased`}>
-      {/* Navigation */}
+      {/* Navigation - Updated with interactive-element class */}
       <nav className="flex justify-end gap-4 mb-12">
-        <Link href="/" className="text-sm text-[#5a534c] hover:text-[#2a2520] transition-colors flex items-center gap-1">
+        <Link href="/" className="interactive-element text-sm flex items-center gap-1">
           <FiHome className="w-3.5 h-3.5" /> Home
         </Link>
-        <Link href="/projects" className="text-sm text-[#5a534c] hover:text-[#2a2520] transition-colors flex items-center gap-1">
+        <Link href="/projects" className="interactive-element text-sm flex items-center gap-1">
           <FiFolder className="w-3.5 h-3.5" /> Projects
         </Link>
       </nav>
@@ -37,37 +38,34 @@ export default function Home() {
           />
         </div>
 
-        {/* Name + Socials */}
+        {/* Name + Socials - Updated with interactive-element class */}
         <div>
           <h1 className="text-4xl md:text-5xl font-normal text-[#2a2520] mb-2 tracking-normal">
             Annie Lin
           </h1>
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-4">
-            <span className="text-[#5a534c]">axlin[at]mit[dot]edu</span>
+            <span className="interactive-element">axlin [at] mit [dot] edu</span>
             <div className="flex gap-4">
               <a href="https://github.com/anniexlinn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                <FiGithub className="w-5 h-5 text-[#5a534c] hover:text-[#2a2520] transition-colors" />
+                <FiGithub className="interactive-element w-5 h-5" />
               </a>
               <a href="https://linkedin.com/in/annie-lin-7a085bb5" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                <FiLinkedin className="w-5 h-5 text-[#5a534c] hover:text-[#2a2520] transition-colors" />
-              </a>
-              <a href="https://instagram.com/anniexlinn" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                <FiInstagram className="w-5 h-5 text-[#5a534c] hover:text-[#2a2520] transition-colors" />
+                <FiLinkedin className="interactive-element w-5 h-5" />
               </a>
             </div>
           </div>
 
           {/* Intro Paragraph */}
           <div className="prose prose-gray max-w-lg">
-            <p className="text-gray-700 mb-4">
+            <p className="text-[#5a534c] mb-4">
               Hi! I&apos;m Annie, a rising senior at MIT studying CS & AI from Houston, TX. 
             </p>
-            <p className="text-gray-700 mb-4">
-              I&apos;m passionate about innovating, whether that means bringing my ideas to life or being a part of something huge.
+            <p className="text-[#5a534c] mb-4">
+              I&apos;m passionate about innovating, whether that means bringing my ideas to life or being a part of something meaningful.
               My current interests are in software development, AI/ML, data analytics, and exploring the applications 
               of these in healthcare and fintech. 
             </p>
-            <p className="text-gray-700">
+            <p className="text-[#5a534c]">
               Outside of tech, I love art, piano, dance, swimming, binge-watching c/kdramas, and trying new coffees &amp; matchas!
             </p>
           </div>
@@ -89,9 +87,9 @@ export default function Home() {
               <h3 className="text-xl font-normal text-[#2a2520] mb-2 tracking-normal">
                 {project.title}
               </h3>
-              <p className="text-gray-600 mb-3">{project.description}</p>
+              <p className="text-[#5a534c] mb-3">{project.description}</p>
 
-              {/* Updated pink tech bubbles */}
+              {/* Tech bubbles */}
               <div className="flex flex-wrap gap-2 mb-4">
                 {project.technologies.map((tech) => (
                   <span key={tech} className="text-xs px-2 py-1 bg-[#fbe6e6] text-[#3a3530] rounded-full">
@@ -100,11 +98,12 @@ export default function Home() {
                 ))}
               </div>
 
+              {/* Updated project link with interactive-element class */}
               <a
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm text-[#5a534c] hover:text-[#2a2520] transition-colors flex items-center gap-1"
+                className="interactive-element text-sm flex items-center gap-1"
               >
                 <FiGithub className="w-4 h-4" /> View more
               </a>
@@ -112,22 +111,23 @@ export default function Home() {
           ))}
         </div>
         
-        {/* View More Projects Arrow Link */}
+        {/* Updated "View more projects" link with interactive-element class */}
         <div className="mt-8 flex justify-end">
           <Link
             href="/projects"
-            className="text-sm text-[#5a534c] hover:text-[#2a2520] transition-colors flex items-center gap-1"
+            className="interactive-element text-m flex items-center gap-1"
           >
             View more projects <FiArrowRight className="w-4 h-4" />
           </Link>
         </div>
 
-        {/* Website Note */}
-        <div className="pt-4 text-sm text-[#3a3530] flex items-center">
+        {/* Updated website note with interactive-element class */}
+        <div className="interactive-element pt-4 text-sm flex items-center">
           <span className="mr-1">+</span>
           <span>this website (React & Next.js, TypeScript, Tailwind CSS)</span>
         </div>
       </section>
+      <Footer />
     </main>
   );
 }

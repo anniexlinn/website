@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FiGithub, FiExternalLink, FiHome, FiFolder } from "react-icons/fi";
 import { allProjects } from "@/data/projects";
 import { Inter } from 'next/font/google';
+import Footer from "@/components/Footer";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -16,13 +17,13 @@ export default function Projects() {
       <nav className="flex justify-end gap-4 mb-12">
         <Link 
           href="/" 
-          className="text-sm text-[#5a534c] hover:text-[#2a2520] transition-colors flex items-center gap-1"
+          className="text-sm text-[#5a534c] hover:text-pink-300 transition-colors flex items-center gap-1"
         >
           <FiHome className="w-3.5 h-3.5" /> Home
         </Link>
         <Link 
           href="/projects" 
-          className="text-sm text-[#5a534c] hover:text-[#2a2520] transition-colors flex items-center gap-1"
+          className="text-sm text-[#5a534c] hover:text-pink-300 transition-colors flex items-center gap-1"
         >
           <FiFolder className="w-3.5 h-3.5" /> Projects
         </Link>
@@ -57,15 +58,16 @@ export default function Projects() {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-[#5a534c] hover:text-[#2a2520] transition-colors flex items-center gap-1"
+              className="text-sm text-[#5a534c] hover:text-pink-300 transition-colors flex items-center gap-1"
             >
               <FiGithub className="w-4 h-4" />
               View more 
-              <FiExternalLink className="w-3 h-3 opacity-80 group-hover:opacity-100 transition-opacity" />
+              {/* <FiExternalLink className="w-3 h-3 opacity-80 group-hover:opacity-100 transition-opacity" /> */}
             </a>
           </section>
         ))}
       </div>
+    <Footer />
     </div>
   );
 }
