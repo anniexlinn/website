@@ -2,11 +2,11 @@
 
 :root {
   /* Light theme (unchanged) */
-  --background: #fef7f6; /* Your light pink */
+  --background: #fef7f6; 
   --foreground: #171717;
   --text-primary: #171717;
   --text-secondary: #3f3f3f;
-  --accent: #4d8f9e; /* Teal-blue for bubbles (light mode) */
+  --accent: #4d8f9e; 
 }
 
 .dark {
@@ -27,7 +27,6 @@
   --pink-medium: #f0c8c6;
   --pink-dark: #e8a7a5;
 
-  /* Add these new variables */
   --interactive: #f0c8c6; /* Light pink */
   --interactive-hover: #ffb6b6; /* Brighter pink */
 }
@@ -48,12 +47,12 @@
 
 /* Interactive Elements - Light Mode */
 .interactive-element {
-  color: var(--text-secondary); /* #3f3f3f in light mode */
+  color: var(--text-secondary); 
   transition: color 200ms ease;
 }
 
 .interactive-element:hover {
-  color: #f9a8d4; /* Your light mode pink hover (similar to pink-300) */
+  color: #f9a8d4; 
 }
 
 /* Interactive Elements - Dark Mode */

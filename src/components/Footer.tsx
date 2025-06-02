@@ -1,11 +1,4 @@
 // src/components/Footer.tsx
-// export default function Footer() {
-//   return (
-//     <footer className="mt-24 text-xs text-[#5a534c]">
-//       <p>© 2025 Annie Lin</p>
-//     </footer>
-//   );
-// }
 
 'use client';
 

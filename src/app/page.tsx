@@ -14,7 +14,7 @@ const inter = Inter({
 export default function Home() {
   return (
     <main className={`min-h-screen px-6 py-12 md:px-12 max-w-3xl mx-auto ${inter.variable} font-sans antialiased`}>
-      {/* Navigation - Updated with interactive-element class */}
+      {/* Navigation */}
       <nav className="flex justify-end gap-4 mb-12">
         <Link href="/" className="interactive-element text-sm flex items-center gap-1">
           <FiHome className="w-3.5 h-3.5" /> Home
@@ -38,7 +38,7 @@ export default function Home() {
           />
         </div>
 
-        {/* Name + Socials - Updated with interactive-element class */}
+        {/* Name + Socials */}
         <div>
           <h1 className="text-4xl md:text-5xl font-normal text-[#2a2520] mb-2 tracking-normal">
             Annie Lin
@@ -98,7 +98,6 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* Updated project link with interactive-element class */}
               <a
                 href={project.url}
                 target="_blank"
@@ -111,7 +110,6 @@ export default function Home() {
           ))}
         </div>
         
-        {/* Updated "View more projects" link with interactive-element class */}
         <div className="mt-8 flex justify-end">
           <Link
             href="/projects"
@@ -121,7 +119,6 @@ export default function Home() {
           </Link>
         </div>
 
-        {/* Updated website note with interactive-element class */}
         <div className="interactive-element pt-4 text-sm flex items-center">
           <span className="mr-1">+</span>
           <span>this website (React & Next.js, TypeScript, Tailwind CSS)</span>
