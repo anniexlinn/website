@@ -15,16 +15,10 @@ export default function Projects() {
     <div className={`min-h-screen px-6 py-12 md:px-12 max-w-3xl mx-auto ${inter.variable} font-sans antialiased`}>
       {/* Navigation - Match home page */}
       <nav className="flex justify-end gap-4 mb-12">
-        <Link 
-          href="/" 
-          className="text-sm text-[#5a534c] hover:text-pink-300 transition-colors flex items-center gap-1"
-        >
+        <Link href="/" className="interactive-element text-sm flex items-center gap-1">
           <FiHome className="w-3.5 h-3.5" /> Home
         </Link>
-        <Link 
-          href="/projects" 
-          className="text-sm text-[#5a534c] hover:text-pink-300 transition-colors flex items-center gap-1"
-        >
+        <Link href="/projects" className="interactive-element text-sm flex items-center gap-1">
           <FiFolder className="w-3.5 h-3.5" /> Projects
         </Link>
       </nav>
@@ -58,7 +52,7 @@ export default function Projects() {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-sm text-[#5a534c] hover:text-pink-300 transition-colors flex items-center gap-1"
+              className="interactive-element text-sm flex items-center gap-1"
             >
               <FiGithub className="w-4 h-4" />
               View more 
