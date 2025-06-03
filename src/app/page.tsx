@@ -121,7 +121,7 @@ export default function Home() {
 
         <div className="interactive-element pt-4 text-sm flex items-center">
           <span className="mr-1">+</span>
-          <span>this website (React & Next.js, TypeScript, Javascript, Tailwind CSS)</span>
+          <span>this website (React & Next.js, TypeScript, Javascript, Tailwind CSS, Vercel)</span>
         </div>
       </section>
       <Footer />
