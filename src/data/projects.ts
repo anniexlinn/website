@@ -19,9 +19,9 @@ export const featuredProjects = [
 export const allProjects = [
   ...featuredProjects,
   {
-    title: "PharmaMol Generator",
+    title: "Generative AI for Drug Discovery",
     description: "ML-powered generator to design pharmaceutically active molecules for drug discovery using evolutionary optimization and deep learning.",
-    technologies: ["Python", "RDKit", "TensorFlow", ],
+    technologies: ["Python", "RDKit", "XGBoost", "RandomForest", "TensorFlow", ],
     url: "https://github.com/anniexlinn/mol-design",
     updated: "Updated yesterday"
   },
