@@ -26,7 +26,7 @@ export const allProjects = [
     updated: "Updated yesterday"
   },
   {
-    title: "Roomba simulation",
+    title: "Robot simulation",
     description: "A grid-based simulation that explores the movement of vacuum robots in rooms to optimize pathfinding with cleaning efficiency analytics.",
     technologies: ["Python", "NumPy", "Matplotlib"],
     url: "https://github.com/anniexlinn/robot-simulation",
