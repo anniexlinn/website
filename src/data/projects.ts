@@ -14,10 +14,6 @@ export const featuredProjects = [
     url: "https://github.com/anniexlinn/website-cloner",
     updated: "Updated yesterday"
   },
-];
-
-export const allProjects = [
-  ...featuredProjects,
   {
     title: "Generative AI for Drug Discovery",
     description: "ML-powered generator to design pharmaceutically active molecules for drug discovery using evolutionary optimization and deep learning.",
@@ -25,6 +21,10 @@ export const allProjects = [
     url: "https://github.com/anniexlinn/mol-design",
     updated: "Updated yesterday"
   },
+];
+
+export const allProjects = [
+  ...featuredProjects,
   {
     title: "Multi-Label Context-aware Inpainting System",
     description: "AI system that intelligently fills missing image regions using context-aware segmentation, AI classification, and inpainting models.",
