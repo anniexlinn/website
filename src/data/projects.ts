@@ -8,10 +8,10 @@ export const featuredProjects = [
     updated: "Updated recently"
   },
   {
-    title: "Multi-Label Context-aware Inpainting System",
-    description: "AI system that intelligently fills missing image regions using context-aware segmentation, AI classification, and inpainting models.",
-    technologies: ["Python", "PyTorch", "MobileSAM", "DeepFill", "OpenCV"],
-    url: "https://github.com/anniexlinn/multi-context-label-inpainting",
+    title: "Website Cloner",
+    description: "A full-stack web app with an AI agent that clones and captures the aesthetics of any website given the URL.",
+    technologies: ["Typescript", "JavaScript", "Python", "Node.js", "HTML/CSS", "Playwright", "Claude API"],
+    url: "https://github.com/anniexlinn/website-cloner",
     updated: "Updated yesterday"
   },
 ];
@@ -23,6 +23,13 @@ export const allProjects = [
     description: "ML-powered generator to design pharmaceutically active molecules for drug discovery using evolutionary optimization and deep learning.",
     technologies: ["Python", "RDKit", "XGBoost", "RandomForest", "TensorFlow", ],
     url: "https://github.com/anniexlinn/mol-design",
+    updated: "Updated yesterday"
+  },
+  {
+    title: "Multi-Label Context-aware Inpainting System",
+    description: "AI system that intelligently fills missing image regions using context-aware segmentation, AI classification, and inpainting models.",
+    technologies: ["Python", "PyTorch", "MobileSAM", "DeepFill", "OpenCV"],
+    url: "https://github.com/anniexlinn/multi-context-label-inpainting",
     updated: "Updated yesterday"
   },
   {
