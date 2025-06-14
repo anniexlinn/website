@@ -40,7 +40,7 @@ export default function Home() {
 
         {/* Name + Socials */}
         <div>
-          <h1 className="text-4xl md:text-5xl font-normal text-[#2a2520] mb-2 tracking-normal">
+          <h1 className="font-orbitron text-4xl md:text-5xl text-[#2a2520] mb-2">
             Annie Lin
           </h1>
           <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center mb-4">
@@ -66,7 +66,7 @@ export default function Home() {
               of these in healthcare and fintech. 
             </p>
             <p className="text-[#5a534c]">
-              Outside of tech, I love art, piano, dance, swimming, binge-watching c/kdramas, and trying new coffees &amp; matchas!
+              Outside of tech, I love art, piano, dance, swimming, binge-watching shows, and trying new coffees &amp; matchas!
             </p>
           </div>
         </div>
@@ -75,7 +75,7 @@ export default function Home() {
       {/* Projects Section */}
       <section className="mb-24">
         <div className="mb-8">
-          <h2 className="text-2xl font-medium text-[#2a2520] mb-2">
+          <h2 className="text-3xl projects-header text-[#2a2520] mb-2">
             Recent projects
           </h2>
           <div className="w-12 h-px bg-gray-300"></div>
