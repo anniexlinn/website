@@ -60,15 +60,15 @@ export default function Home() {
             
             <div className="max-w-lg mx-auto text-secondary dark:text-[#e8c9c8] space-y-2 px-4"> 
               <p className="text-secondary dark:text-[#e8c9c8]">
-                Hi! I'm Annie, a rising senior at MIT studying Computer Science + Artificial Intelligence from Houston, TX. 
+                Hi! I&apos;m Annie, a rising senior at MIT studying Computer Science + Artificial Intelligence from Houston, TX. 
               </p>
               <p className="text-secondary dark:text-[#e8c9c8]">
-                I'm passionate about innovating, whether that means bringing my ideas to life or being a part of something meaningful.
+                I&apos;m passionate about innovating, whether that means bringing my ideas to life or being a part of something meaningful.
                 My current interests are in software development, AI/ML, data analytics, and exploring the applications 
                 of these in healthcare and fintech. 
               </p>
               <p className="text-secondary dark:text-[#e8c9c8]">
-                Outside of tech, I love art, piano, dance, swimming, binge-watching shows, and trying new coffees & matchas!
+                Outside of tech, I love art, piano, dance, swimming, binge-watching shows, and trying new coffees &amp; matchas!
               </p>
             </div>
           </div>
