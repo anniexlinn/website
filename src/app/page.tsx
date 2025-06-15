@@ -117,6 +117,13 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <div className="mt-8 flex justify-center">
+            <span className="tech-bubble text-xs px-2 py-1 rounded-full
+                              bg-[#f5e6e5] dark:bg-[#2e3740]
+                              text-[#171717] dark:text-[#f8fafc]">
+              + this website built with: TypeScript, JavaScript, TailwindCSS, React & Next.js, Vercel
+            </span>
+          </div>
         </section>
       </main>
 
