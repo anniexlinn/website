@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const isProjectsActive = pathname === '/' && typeof window !== 'undefined' && window.location.hash === '#projects';
+  // const isProjectsActive = pathname === '/' && typeof window !== 'undefined' && window.location.hash === '#projects';
 
   const handleScroll = (e: React.MouseEvent, target: 'top' | 'projects') => {
     e.preventDefault();

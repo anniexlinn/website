@@ -1,7 +1,7 @@
 'use client'
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image";
-import { FiArrowRight, FiGithub, FiLinkedin, FiHome, FiFolder } from "react-icons/fi";
+import { FiGithub, FiLinkedin} from "react-icons/fi";
 import { allProjects } from "@/data/projects";
 import { Inter } from 'next/font/google';
 import Footer from "@/components/Footer";
