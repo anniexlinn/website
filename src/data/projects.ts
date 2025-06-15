@@ -1,7 +1,7 @@
 // src/data/projects.ts
 export const featuredProjects = [
   {
-    title: "AI-Powered Math Battle Card Game",
+    title: "AI-Powered Math Battle Game",
     description: "A full-stack, educational web game that teaches mathematics through AI-powered battles. Designed for engagement and learning using real-time feedback and equation-solving mechanics.",
     technologies: ["JavaScript", "Node.js", "HTML/CSS", "OpenAI API", "Gemini API", "MongoDB", "Phaser"],
     url: "https://github.com/klopfer/collectiongame",
@@ -40,7 +40,7 @@ export const allProjects = [
     updated: "Updated yesterday"
   },
   {
-    title: "Lightning Code Explainer",
+    title: "Code Explainer",
     description: "CLI tool using Cerebras's Qwen3 model to generate rapid code explanations in < 0.5s.",
     technologies: ["Python", "Cerebras SDK", "NLP", "HuggingFace Transformers"],
     url: "https://github.com/anniexlinn/cerebras-code-explainer",

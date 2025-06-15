@@ -1,36 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
 @import "tailwindcss";
 
-
 :root {
-  /* Light theme (unchanged) */
-  --background: #fef7f6; 
+  /* Light theme */
+  --background: #fef7f6;
   --foreground: #171717;
   --text-primary: #171717;
   --text-secondary: #3f3f3f;
-  --accent: #4d8f9e; 
+  --accent: #4d8f9e;
+  
+  /* Project cards */
+  --project-card-bg: #f5e6e5;
+  --project-card-text: #171717;
+  --project-card-tech-bg: #f0d6d6;
+  
+  /* Tech bubbles */
+  --tech-bubble-bg: #f0d6d6;
+  --tech-bubble-text: #171717;
 }
 
 .dark {
-  /* Enhanced dark theme */
+  /* Cool dark theme */
   --background: #1a1a1a;
+  --foreground: #f8e9e8;
+  --text-primary: #ffd6d6;
+  --text-secondary: #e8c9c8;
+  --accent: #5a9cad;
+  --accent-text: #171717;
   
-  /* Text colors */
-  --foreground: #f8e9e8; /* Base text */
-  --text-primary: #ffd6d6; /* Brighter pink for headings */
-  --text-secondary: #e8c9c8; /* Softer pink for subtext */
-  
-  /* Accents */
-  --accent: #5a9cad; /* Muted teal-blue for bubbles */
-  --accent-text: #171717; /* Dark text inside bubbles */
-  
-  /* Additional pink tones */
+  /* Pink tones */
   --pink-light: #f8e9e8;
   --pink-medium: #f0c8c6;
   --pink-dark: #e8a7a5;
-
-  --interactive: #f0c8c6; /* Light pink */
-  --interactive-hover: #ffb6b6; /* Brighter pink */
+  
+  /* Interactive elements */
+  --interactive: #f0c8c6;
+  --interactive-hover: #ffb6b6;
+  
+  /* Project cards */
+  --project-card-bg: #2e3740; /* Dark blue-gray */
+  --project-card-text: #f8e9e8;
+  --project-card-tech-bg: #3a3530;
+  
+  /* Tech bubbles */
+  --tech-bubble-bg: #3c4754; /* Cool blue-gray */
+  --tech-bubble-text: #e2e8f0;
 }
 
 @theme inline {
@@ -46,25 +60,6 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-orbitron: 'Orbitron', sans-serif;
-}
-
-/* Interactive Elements - Light Mode */
-.interactive-element {
-  color: var(--text-secondary); 
-  transition: color 200ms ease;
-}
-
-.interactive-element:hover {
-  color: #f9a8d4; 
-}
-
-/* Interactive Elements - Dark Mode */
-.dark .interactive-element {
-  color: var(--interactive) !important; /* #f0c8c6 */
-}
-
-.dark .interactive-element:hover {
-  color: var(--interactive-hover) !important; /* #ffb6b6 */
 }
 
 /* Base styles */
@@ -91,33 +86,94 @@ p, li {
   color: var(--text-secondary);
 }
 
-/* Technology bubbles */
-.tech-bubble {
-  background-color: var(--accent);
-  color: var(--accent-text);
-  padding: 0.25rem 0.75rem;
-  border-radius: 9999px;
-  display: inline-block;
-  font-size: 0.875rem;
-  font-weight: 500;
+/* Interactive Elements */
+.interactive-element {
+  color: var(--text-secondary);
+  transition: color 200ms ease;
 }
 
+.interactive-element:hover {
+  color: #f9a8d4;
+}
+
+.dark .interactive-element {
+  color: var(--interactive) !important;
+}
+
+.dark .interactive-element:hover {
+  color: var(--interactive-hover) !important;
+}
+
+/* Technology bubbles */
+.tech-bubble {
+  /* Size */
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  display: inline-block;
+  font-weight: 500;
+  
+  /* Light mode colors */
+  background-color: #f0d6d6;
+  color: var(--text-primary);
+  
+  /* Dark mode colors */
+  .dark & {
+    background-color: #475569;
+    color: #f8fafc;
+  }
+}
+
+
+/* Project Cards */
+.project-card {
+  background-color: var(--project-card-bg);
+  transition: all 300ms ease;
+  height: 300px; /* Or your preferred fixed height */
+  min-height: 400px;
+  max-height: 400px;
+  overflow: hidden; /* Ensures content doesn't overflow the fixed size */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card > div {
+  flex: 1;
+  overflow: auto; /* Allows scrolling if content exceeds card height */
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dark .project-card:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Orbitron font styles */
 .font-orbitron {
   font-family: 'Orbitron', sans-serif;
   font-weight: 700;
-  letter-spacing: 1px;      
-  line-height: 0.8;          
-  text-transform: lowercase;  
-  transform: scaleY(1.1);    
-  display: inline-block;    
+  letter-spacing: 1px;
+  line-height: 0.8;
+  text-transform: lowercase;
+  transform: scaleY(1.1);
+  display: inline-block;
 }
 
 .projects-header {
   font-family: 'Orbitron', sans-serif;
   font-weight: 700;
-  letter-spacing: 1.5px;    
+  letter-spacing: 1.5px;
   text-transform: lowercase;
   display: inline-block;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
 }
 
 /* Special pink accents */
