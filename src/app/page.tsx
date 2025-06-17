@@ -64,7 +64,7 @@ export default function Home() {
               </p>
               <p className="text-secondary dark:text-[#e8c9c8]">
                 I&apos;m passionate about innovating, whether that means bringing my ideas to life or being a part of something meaningful.
-                My current interests are in software development, AI/ML, data analytics, and exploring the applications 
+                My current interests are in software development, AI/ML, web design, data analytics, and exploring the applications 
                 of these in healthcare and fintech. 
               </p>
               <p className="text-secondary dark:text-[#e8c9c8]">
