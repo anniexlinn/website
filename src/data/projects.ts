@@ -47,3 +47,27 @@ export const allProjects = [
     updated: "Updated yesterday"
   }
 ];
+
+export const displayedProjects = [
+  {
+    title: "AI Game",
+    description: "LLM-powered NPC interactions",
+    technologies: ["Python", "LLMs", "Unity"],
+    url: "#",
+    imageUrl: "/aigame.png"
+  },
+  {
+    title: "E-Commerce",
+    description: "Online store platform",
+    technologies: ["React", "Node.js", "MongoDB"],
+    url: "#",
+    imageUrl: "/placeholder-ecom.jpg"
+  },
+  {
+    title: "Health App",
+    description: "Patient monitoring system",
+    technologies: ["Flutter", "Firebase", "Dart"],
+    url: "#",
+    imageUrl: "/placeholder-health.jpg"
+  }
+];

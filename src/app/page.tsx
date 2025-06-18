@@ -6,6 +6,8 @@ import { allProjects } from "@/data/projects";
 import { Inter } from 'next/font/google';
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
+import { useState } from "react";
+import { displayedProjects } from "@/data/projects";
 
 const inter = Inter({
   subsets: ['latin'],
@@ -14,6 +16,17 @@ const inter = Inter({
 });
 
 export default function Home() {
+  // const [displayedProjects] = useState(allProjects.slice(0, 3));
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const handleNextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % displayedProjects.length);
+  };
+
+  const handlePrevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + displayedProjects.length) % displayedProjects.length);
+  };
+
   return (
     <div className={`min-h-screen flex flex-col ${inter.variable} font-sans antialiased`}>
       {/* Anchor point for Home link */}
@@ -79,6 +92,64 @@ export default function Home() {
           <h2 className="text-3xl font-orbitron text-primary dark:text-[#f0c8c6] mb-8 text-center">
             Projects
           </h2>
+
+          {/* Compact Slideshow */}
+        <div className="mb-12 mx-auto max-w-3xl">
+        <div className="relative w-full h-100 overflow-hidden rounded-xl shadow-md border border-[#f0d6d6] dark:border-[#475569]">
+          {displayedProjects.map((project, index) => (
+            <div 
+              key={project.title}
+              className={`absolute inset-0 transition-opacity duration-300 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
+            >
+              {/* Background Image with Subtle Overlay */}
+              <div 
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${project.imageUrl})` }}
+              />
+              <div className="absolute inset-0 bg-black/30 dark:bg-black/40" />
+              
+              {/* Content */}
+              <div className="relative h-full flex flex-col justify-end p-6">
+                <div className="mb-2">
+                  <h3 className="text-xl font-orbitron !text-[#f0c8c6]">
+                    {project.title}
+                  </h3>
+                  <p className="text-xs !text-[#f0c8c6] mb-1">
+                    {project.technologies.join(', ')}
+                  </p>
+                </div>
+                
+                {/* GitHub Icon */}
+                <a
+                  href={project.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-6 right-6 text-[#f0c8c6] hover:text-white transition-colors"
+                  aria-label="GitHub Repository"
+                >
+                  <FiGithub className="w-6 h-6" />
+                </a>
+              </div>
+            </div>
+          ))}
+          
+          {/* Compact Navigation Arrows */}
+          <button 
+            onClick={handlePrevSlide}
+            className="absolute left-3 top-1/2 -translate-y-1/2 bg-[#f0d6d6] dark:bg-[#475569] rounded-full w-8 h-8 flex items-center justify-center hover:scale-110 transition-all"
+            aria-label="Previous project"
+          >
+            &larr;
+          </button>
+          <button 
+            onClick={handleNextSlide}
+            className="absolute right-3 top-1/2 -translate-y-1/2 bg-[#f0d6d6] dark:bg-[#475569] rounded-full w-8 h-8 flex items-center justify-center hover:scale-110 transition-all"
+            aria-label="Next project"
+          >
+            &rarr;
+          </button>
+        </div>
+      </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {allProjects.map((project) => (
