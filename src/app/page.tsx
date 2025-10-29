@@ -73,7 +73,7 @@ export default function Home() {
             
             <div className="max-w-lg mx-auto text-secondary dark:text-[#e8c9c8] space-y-2 px-4"> 
               <p className="text-secondary dark:text-[#e8c9c8]">
-                Hi! I&apos;m Annie, a rising senior at MIT studying Computer Science + Artificial Intelligence from Houston, TX. 
+                Hi! I&apos;m Annie, a senior at MIT studying Computer Science + Artificial Intelligence from Houston, TX. 
               </p>
               <p className="text-secondary dark:text-[#e8c9c8]">
                 I&apos;m passionate about innovating, whether that means bringing my ideas to life or being a part of something meaningful.
