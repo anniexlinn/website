@@ -2,7 +2,7 @@
 export const featuredProjects = [
   {
     title: "AI-Powered Math Battle Game",
-    description: "Educational AI game that teaches mathematics through real-time battles, feedback, and equation-solving mechanics.",
+    description: "Educational multiplayer game that teaches algebra through real-time battles, adaptive AI feedback, and equation-solving mechanics. Designed to help students build mathematical intuition by connecting gameplay progression with problem-solving strategies.",
     technologies: ["Javascript", " Node.js", "Socket.IO", "MongoDB"],
     url: "https://github.com/klopfer/collectiongame",
     updated: "Javascript • Node.js • LLMs • Socket.IO • MongoDB/Mongoose",
@@ -11,7 +11,7 @@ export const featuredProjects = [
   },
   {
     title: "Medical Supply Allocation Optimization",
-    description: "Mixed-integer optimization model for emergency vaccine distribution across Massachusetts hospitals, minimizing delivery time while satisfying cold-chain, vehicle, and supply constraints.",
+    description: "Mixed-integer optimization model for emergency vaccine distribution across Massachusetts hospitals. Optimizes delivery routes and inventory allocation while satisfying cold-chain requirements, vehicle capacities, and regional supply constraints to improve response efficiency during public health emergencies.",
     technologies: ["Julia", "MILP", "OpenRouteService"],
     url: "https://drive.google.com/file/d/1OLt3uqP0INPJUSzb1NmhYq6UQoioaLID/view?usp=sharing",
     updated: "Software • AI • Systems",
@@ -20,7 +20,7 @@ export const featuredProjects = [
   },
   {
     title: "Generative AI for Drug Discovery",
-    description: "Molecular design pipeline using generative modeling, evolutionary optimization, and predictive ML scoring.",
+    description: "Computational drug discovery pipeline that combines molecular generation, predictive ML scoring, and virtual screening to identify promising therapeutic candidates. Integrates molecular property prediction and optimization to accelerate early-stage drug design.",
     technologies: ["Python", "RDKit", "XGBoost", "TensorFlow"],
     url: "https://github.com/anniexlinn/mol-design",
     updated: "Software • AI • Systems",
@@ -29,8 +29,7 @@ export const featuredProjects = [
   },
   {
     title: "Large-Scale AI Evaluation Platform",
-    description:
-      "A serverless cloud platform that benchmarks LLM capabilities across 900+ occupations, supporting 5,000+ concurrent users with sub-500ms latency.",
+    description: "Serverless cloud platform for benchmarking AI capabilities across 900+ occupations and thousands of real-world tasks. Supports 5,000+ concurrent users with sub-500ms latency while automating task assignment, response collection, analytics, and evaluation workflows.",
     technologies: ["Typescript", "AWS Lambda", "DynamoDB", "API Gateway"],
     url: "#",
     updated: "Cloud • Distributed Systems • AI",
@@ -43,7 +42,7 @@ export const allProjects = [
   ...featuredProjects,
   {
     title: "Multi-Label Context-aware Inpainting System",
-    description: "AI system that fills missing image regions using segmentation, classification, and context-aware inpainting models.",
+    description: "Computer vision pipeline that restores missing image regions using segmentation, classification, and context-aware inpainting models. Leverages scene understanding and object-level reasoning to generate more coherent and visually realistic reconstructions.",
     technologies: ["Python", "PyTorch", "MobileSAM", "OpenCV"],
     url: "https://github.com/anniexlinn/multi-context-label-inpainting",
     updated: "Software • AI • Systems",
