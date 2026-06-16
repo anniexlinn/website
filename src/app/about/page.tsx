@@ -31,7 +31,7 @@ export default function About() {
 
           <div className="max-w-2xl font-body text-lg leading-relaxed text-secondary md:text-xl">
             <p>
-              I'm a recent MIT graduate who studied AI + Bio from Houston, TX. I'll be 
+              I&apos;m a recent MIT graduate who studied AI + Bio from Houston, TX. I&apos;ll be 
               working as a software engineer in NYC starting this fall. 
             </p>
 
