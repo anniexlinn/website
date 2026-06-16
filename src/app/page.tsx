@@ -1,133 +1,94 @@
-'use client'
-// import Link from "next/link";
-import Image from "next/image";
-import { FiGithub, FiLinkedin} from "react-icons/fi";
-import { allProjects } from "@/data/projects";
-import { Inter } from 'next/font/google';
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
-
-const inter = Inter({
-  subsets: ['latin'],
-  weight: ['300', '400'],
-  variable: '--font-inter',
-});
+import Image from 'next/image';
+import { FiGithub, FiLinkedin } from 'react-icons/fi';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
+import { allProjects } from '@/data/projects';
 
 export default function Home() {
   return (
-    <div className={`min-h-screen flex flex-col ${inter.variable} font-sans antialiased`}>
-      {/* Anchor point for Home link */}
-      <div id="top" className="absolute top-0" />
-      
-      {/* Navbar */}
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
-      {/* Main content container */}
-      <main className="flex-1 px-6 pt-24 pb-12 md:px-12 md:pt-28 mx-auto w-full max-w-5xl">
-        {/* Header Section */}
-        <header className="mb-20 flex flex-col items-center text-center">
-          {/* Profile Image */}
-          <div className="w-36 h-36 md:w-44 md:h-44 rounded-full overflow-hidden mb-6 shadow-lg hover:shadow-xl transition-all duration-300">
-            <Image
-              src="/annie-profile.jpg"
-              alt="Annie Lin"
-              width={176}
-              height={176}
-              className="object-cover w-full h-full hover:scale-105 transition-transform duration-300"
-              priority
-            />
-          </div>
-
-          {/* Text Content */}
-          <div className="space-y-4 max-w-2xl">
-            <h1 className="font-orbitron text-4xl md:text-5xl text-primary dark:text-[#f0c8c6]">
-              Annie Lin
+      <main className="mx-auto w-full max-w-6xl px-6 pt-32 md:px-12">
+        <section className="pb-28 pt-20">
+          <div className="max-w-3xl">
+            <h1 className="font-display text-[clamp(3rem,6vw,5rem)] italic leading-[0.95] tracking-[-0.035em] text-primary">
+              hi &mdash; i&apos;m annie!
             </h1>
-            
-            <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
-              <span className="interactive-element">
-                axlin [at] mit [dot] edu
-              </span>
-              <div className="flex gap-4">
-                <a href="https://github.com/anniexlinn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                  <FiGithub className="interactive-element w-5 h-5" />
-                </a>
-                <a href="https://linkedin.com/in/annie-lin-7a085bb5" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-                  <FiLinkedin className="interactive-element w-5 h-5" />
-                </a>
-              </div>
-            </div>
-            
-            <div className="max-w-lg mx-auto text-secondary dark:text-[#e8c9c8] space-y-2 px-4"> 
-              <p className="text-secondary dark:text-[#e8c9c8]">
-                Hi! I&apos;m Annie, a senior at MIT studying Computer Science + Artificial Intelligence from Houston, TX. 
-              </p>
-              <p className="text-secondary dark:text-[#e8c9c8]">
-                I&apos;m passionate about innovating, whether that means bringing my ideas to life or being a part of something meaningful.
-                My current interests are in software development, AI/ML, web design, data analytics, and exploring the applications 
-                of these in healthcare and fintech. 
-              </p>
-              <p className="text-secondary dark:text-[#e8c9c8]">
-                Outside of tech, I love art, piano, dance, swimming, binge-watching shows, and trying new coffees &amp; matchas!
-              </p>
+
+            <p className="mt-8 max-w-xl font-body text-[1.05rem] leading-[1.65] tracking-[-0.015em] text-secondary md:text-[1.15rem]">
+              I recently graduated from MIT, where I studied Artificial Intelligence + Biology.
+              I enjoy exploring AI systems, machine learning, and thoughtful product design.
+            </p>
+
+            <div className="mt-8 flex gap-5 font-body text-sm lowercase text-secondary">
+              <a
+                href="https://github.com/anniexlinn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-underline inline-flex items-center gap-1"
+              >
+                github <FiGithub className="h-3.5 w-3.5" />
+              </a>
+              <a
+                href="https://linkedin.com/in/annie-lin-7a085bb5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-underline inline-flex items-center gap-1"
+              >
+                linkedin <FiLinkedin className="h-3.5 w-3.5" />
+              </a>
             </div>
           </div>
-        </header>
+        </section>
 
-        {/* Projects Section */}
-        <section id="projects" className="mb-16 scroll-mt-16">
-          <h2 className="text-3xl font-orbitron text-primary dark:text-[#f0c8c6] mb-8 text-center">
-            Projects
+        <section id="work" className="border-t border-line py-16">
+          <h2 className="font-display text-[clamp(3rem,6vw,4rem)] italic leading-none tracking-[-0.04em] text-primary mb-10">
+            work
           </h2>
-          
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="space-y-8">
             {allProjects.map((project) => (
-              <div 
-                key={project.title} 
-                className="project-card rounded-lg overflow-hidden transition-all duration-300 hover:-translate-y-1"
+              <a
+                key={project.title}
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group grid gap-6 rounded-3xl border border-line p-7 transition hover:bg-[#f7f7f5] md:grid-cols-[220px_1fr]"
               >
-                <div className="p-5 space-y-3">
-                  <h3 className="text-xl font-medium text-primary dark:text-[#f0c8c6]">
-                    {project.title}
-                  </h3>
-                  <p className="text-secondary dark:text-[#e8c9c8]">{project.description}</p>
-                  
-                  <div className="flex flex-wrap gap-2 py-2">
-                    {project.technologies.map((tech) => (
-                      <span 
-                        key={tech} 
-                        className="tech-bubble text-xs px-2 py-1 rounded-full
-                                  bg-[#f0d6d6] dark:bg-[#475569]
-                                  text-[#171717] dark:text-[#f8fafc]"
-                      >
-                        {tech}
-                      </span>
+                {project.image ? (
+                  <div className="relative h-36 overflow-hidden rounded-2xl border border-line bg-[#efefed] md:h-40">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover grayscale transition duration-500 group-hover:scale-105 group-hover:grayscale-0"
+                    />
+                  </div>
+                ) : (
+                  <div className="project-thumb h-36 md:h-40" />
+                )}
+
+                <div>
+                  <h2 className="max-w-2xl font-body text-[clamp(1.15rem,1.8vw,1.45rem)] font-normal leading-[1.2] tracking-[-0.02em] text-primary">
+                    {project.title.toLowerCase()}
+                  </h2>
+
+                  <p className="mt-3 max-w-2xl font-body text-base leading-relaxed tracking-[-0.015em] text-secondary">
+                    {project.description}
+                  </p>
+
+                  <div className="mt-4 flex flex-wrap gap-x-4 gap-y-2 font-body text-sm text-primary">
+                    {project.technologies.slice(0, 4).map((tech) => (
+                      <span key={tech}>{tech.trim()}</span>
                     ))}
                   </div>
-
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="interactive-element text-sm flex items-center gap-1 mt-3"
-                  >
-                    <FiGithub className="w-4 h-4" /> View Project
-                  </a>
                 </div>
-              </div>
+              </a>
             ))}
-          </div>
-          <div className="mt-8 flex justify-center">
-            <span className="tech-bubble text-xs px-2 py-1 rounded-full
-                              bg-[#f5e6e5] dark:bg-[#2e3740]
-                              text-[#171717] dark:text-[#f8fafc]">
-              + this website built with: TypeScript, JavaScript, TailwindCSS, React & Next.js, Vercel
-            </span>
           </div>
         </section>
       </main>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

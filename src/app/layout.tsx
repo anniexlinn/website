@@ -1,14 +1,19 @@
-
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
+import { Newsreader, Manrope } from 'next/font/google';
 import './globals.css';
-import { ThemeProvider } from '@/components/theme-provider';
-import { Orbitron } from 'next/font/google';
 
-const orbitron = Orbitron({
+const newsreader = Newsreader({
   subsets: ['latin'],
-  weight: ['400', '700'],
-  variable: '--font-orbitron', 
+  weight: ['400', '500'],
+  style: ['normal', 'italic'],
+  variable: '--font-display',
+});
+
+const manrope = Manrope({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-body',
 });
 
 export default function RootLayout({
@@ -17,22 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html 
-      lang="en" 
-      className={`${GeistSans.variable} ${GeistMono.variable} ${orbitron.variable}`}
+    <html
+      lang="en"
+      className={`${GeistSans.variable} ${GeistMono.variable} ${newsreader.variable} ${manrope.variable}`}
       suppressHydrationWarning
-      // Ensure the theme class is applied to html element
-      style={{ colorScheme: 'light dark' }} // Helps with browser-native dark mode
     >
-      <body className="min-h-screen bg-background text-foreground transition-colors duration-200">
-        <ThemeProvider 
-          attribute="class" 
-          defaultTheme="system" 
-          enableSystem
-          disableTransitionOnChange={false} // Smoother transitions
-        >
-          {children}
-        </ThemeProvider>
+      <body className="min-h-screen bg-background text-foreground antialiased">
+        {children}
       </body>
     </html>
   );
