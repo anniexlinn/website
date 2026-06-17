@@ -29,7 +29,7 @@ export default function About() {
             />
           </div>
 
-          <div className="max-w-2xl font-body text-lg leading-relaxed text-secondary md:text-xl">
+          <div className="max-w-2xl font-body text-[1.05rem] leading-[1.65] tracking-[-0.015em] text-secondary md:text-[1.15rem]">
             <p>
               I&apos;m a recent MIT graduate who studied AI + Bio from Houston, TX. I&apos;ll be 
               working as a software engineer in NYC starting this fall. 
