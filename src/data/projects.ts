@@ -2,7 +2,7 @@
 export const featuredProjects = [
   {
     title: "AI-Powered Math Battle Game",
-    description: "Educational multiplayer game that teaches algebra through real-time battles, adaptive AI feedback, and equation-solving mechanics. Designed to help students build mathematical intuition by connecting gameplay progression with problem-solving strategies.",
+    description: "Educational multiplayer game that teaches mathematics through real-time battles, adaptive AI feedback, and equation-solving mechanics. Designed to help students build mathematical intuition by connecting gameplay progression with problem-solving strategies.",
     technologies: ["Javascript", " Node.js", "Socket.IO", "MongoDB"],
     url: "https://github.com/klopfer/collectiongame",
     updated: "Javascript • Node.js • LLMs • Socket.IO • MongoDB/Mongoose",
