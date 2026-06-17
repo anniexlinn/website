@@ -19,6 +19,15 @@ export const featuredProjects = [
     image: "/med.png"
   },
   {
+    title: "Computational Imaging Suite",
+    description: "Collection of image processing techniques and algorithms including image segmentation, feature extraction, edge detection, Gaussian filtering, color quantization, panorama stitching, mosaic generation, brushstroke synthesis, etc. ",
+    technologies: ["C++", "Eigen", "LodePNG"],
+    url: "https://github.com/anniexlinn/image-processing",
+    updated: "Software • AI • Systems",
+    tone: "from-neutral-100 via-zinc-500 to-neutral-900",
+    image: "/comppic.png"
+  },
+  {
     title: "Generative AI for Drug Discovery",
     description: "Computational drug discovery pipeline that combines molecular generation, predictive ML scoring, and virtual screening to identify promising therapeutic candidates. Integrates molecular property prediction and optimization to accelerate early-stage drug design.",
     technologies: ["Python", "RDKit", "XGBoost", "TensorFlow"],
